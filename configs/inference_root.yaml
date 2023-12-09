@@ -1,0 +1,36 @@
+# @package _global_
+
+defaults:
+  - _self_
+  - hydra: default
+  - logger: null
+  - model: ???
+  - datamodule: ???
+  - optional local: default.yaml
+  - optional private_fields: default.yaml
+
+n_batch_retries: 2 # Should be >= 1
+fault_tolerant_mode: False
+
+n_api_retries: 2 # Should be >= 1
+
+experiment_path_to_continue: null
+
+# path to work directory
+work_dir: ${hydra:runtime.cwd}
+# path to data directory
+data_dir: ${work_dir}/data
+# path to output directory, created dynamically by hydra
+output_dir: ${hydra:runtime.output_dir}
+
+ignore_warnings: False
+print_config: True
+
+# Seed used to seed everything in the beginning of the run script and to fix randomness in dataset
+seed: 123
+
+# determines the log directory's parent folder
+logs_subfolder: inference
+
+# experiment name – determines the logging folder's path
+run_name: ???

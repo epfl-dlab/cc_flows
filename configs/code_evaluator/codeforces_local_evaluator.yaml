@@ -1,0 +1,10 @@
+local_evaluator:
+  _target_: src.evaluation.CodeforcesLocalEvaluator
+
+  num_workers: 1
+  debug: ${debug}
+
+  eval_helper_params:
+    timeout: 20
+    add_extra_imports: False
+    allow_truncated_io: True

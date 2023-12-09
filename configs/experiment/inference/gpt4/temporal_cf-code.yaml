@@ -1,0 +1,23 @@
+# @package _global_
+
+defaults:
+  - /experiment/inference/gpt4: _default
+  - override /datamodule: [codeforces, _bucketing_codeforces_temporal]
+
+flow:
+  _target_: aiflows.CCFlows.CF_Code.instantiate_from_default_config
+  backend:
+    api_infos: ${api_information}
+
+output_interface:
+  additional_transformations: # CF_Code returns the api_output. This transformation extracts the code from it
+    - _target_: aiflows.data_transformations.RegexFirstOccurrenceExtractor
+      regex: '(?<=```python)([\s\S]*?)(?=```)'
+      regex_fallback: '(?<=```)([\s\S]*?)(?=```)'
+      input_key: "api_output"
+      output_key: "code"
+      strip: True
+      assert_unique: True
+
+flow_name: "code"
+run_name: ${prefix}${datamodule.name}_temporal--gpt-4--${flow_name}

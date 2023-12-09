@@ -1,0 +1,23 @@
+# @package _global_
+
+defaults:
+  - /experiment/inference/gpt4: _default
+  - override /datamodule:
+      [codeforces, _bucketing_codeforces_before_and_after_cutoff_chatgpt]
+
+flow:
+  _target_: aiflows.CCFlows.CF_PlanCollab_Code.instantiate_from_default_config
+  subflows_config:
+    PlanGenerator:
+      subflows_config:
+        PlanGenerator:
+          backend:
+            api_infos: ${api_information}
+        PlanCritic:
+          backend:
+            api_infos: ${api_information}
+    CodeGenerator:
+      backend:
+        api_infos: ${api_information}
+
+flow_name: "plan_collab-code"

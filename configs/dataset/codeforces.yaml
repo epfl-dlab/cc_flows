@@ -1,0 +1,33 @@
+_target_: src.datasets.CodeforcesDataset
+dataset_name: codeforces
+seed: 123
+debug: False
+debug_k: 5
+ids_to_keep: null
+ids_to_keep_file: null
+kwargs_to_filter_on: null
+plans_dir: ${data_dir}/plans
+plans_id: null
+evaluation_buckets_dir: ${data_dir}/evaluation_bucketing
+bucketing_id_to_filter_on: null
+bucket_debug_k: null
+bucket_debug_k_first_k: True
+load_dataset_params:
+  split: "codeforces"
+  data_dir: ${data_dir}/${..dataset_name}
+
+io_example_template: |2-
+  # Test case {{idx}}
+  ## Input {{idx}}
+  ```
+  {{input}}
+  ```
+  ## Expected output {{idx}}
+  ```
+  {{output}}
+  ```
+
+io_example_separator: "\n\n"
+explanation_template: |2-
+  # Explanation of the test cases
+  {{note}}

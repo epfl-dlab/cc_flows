@@ -1,0 +1,16 @@
+_target_: aiflows.flow_launchers.FlowLauncher
+
+#output_dir: ???  # will be set at runtime
+launch_prediction: False
+n_independent_samples: ???
+debug: False
+
+# ~~~ Parallelization over API keys ~~~
+n_workers: 1
+single_threaded: True
+
+# ~~~ Fault Tolerance ~~~
+fault_tolerant_mode: False
+n_batch_retries: 2
+wait_time_between_retries: 20
+

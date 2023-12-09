@@ -1,0 +1,40 @@
+defaults:
+  - default
+  - /dataset@dataset_parameters.test.dataset: codeforces
+
+_target_: src.datamodules.CodeforcesDataModule
+name: codeforces
+
+# ~~~ concerning filtering ~~~
+ids_to_keep: null # a list of ids to keep, if None, all ids are kept
+ids_to_keep_file: null # a file containing a list of ids to keep. If None, all ids are kept
+ids_to_discard: null
+keep_only_localeval_compatible: True
+
+# keep only ids belonging to a bucket according to the bucketing schema specified by the given bucketing id
+evaluation_buckets_dir: ${data_dir}/evaluation_bucketing
+bucketing_id_to_filter_on: null # if None, all ids are kept
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+batch_size: 1
+num_workers: 0
+
+debug: False
+debug_k: 5
+bucket_debug_k: null # if set to an integer, only the first k datapoints in each bucket are loaded
+
+plans_id: null
+
+dataset_parameters:
+  test:
+    dataset:
+      keep_only_localeval_compatible: ${....keep_only_localeval_compatible}
+      ids_to_keep: ${....ids_to_keep}
+      ids_to_discard: ${....ids_to_discard}
+      ids_to_keep_file: ${....ids_to_keep_file}
+      evaluation_buckets_dir: ${....evaluation_buckets_dir}
+      bucketing_id_to_filter_on: ${....bucketing_id_to_filter_on}
+      debug: ${....debug}
+      debug_k: ${....debug_k}
+      bucket_debug_k: ${....bucket_debug_k}
+      plans_id: ${....plans_id}

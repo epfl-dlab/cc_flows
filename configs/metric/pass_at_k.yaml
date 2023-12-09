@@ -1,0 +1,6 @@
+_target_: src.metrics.PassAtK
+code_evaluator_id: ${code_evaluator_id}
+hidden_test_cases: ${hidden_test_cases} # Whether to compute the solve rate on the hidden test cases
+bucketing_id: ${bucketing_id}
+evaluation_buckets_dir: ${data_dir}/evaluation_bucketing
+k: ???

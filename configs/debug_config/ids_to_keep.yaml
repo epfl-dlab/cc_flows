@@ -1,0 +1,17 @@
+# @package _global_
+
+# default debugging setup in which we run inference only on a few datapoints
+
+ids_to_keep: ??? # list of ids to keep
+
+model:
+  n_independent_samples: 1
+  single_threaded: true
+
+datamodule:
+  num_workers: 0 # debuggers don't like multiprocessing
+  bucket_debug_k: null
+  dataset_parameters:
+    test:
+      dataset:
+        ids_to_keep: ${ids_to_keep}

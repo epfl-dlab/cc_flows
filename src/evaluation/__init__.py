@@ -1,0 +1,1 @@
+from .codeforces_local_evaluator import CodeforcesLocalEvaluator

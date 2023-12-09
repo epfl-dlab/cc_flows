@@ -1,0 +1,27 @@
+# @package _global_
+
+defaults:
+  - override /model: flow_api_launcher
+
+input_interface:
+  _target_: aiflows.interfaces.KeyInterface
+  additional_transformations:
+    - _target_: aiflows.data_transformations.KeyMatchInput # Pass the input keys specified by the flow
+
+api_information: ${local.api_information}
+
+flow:
+  _target_: aiflows.CC_flows.CF_Code.instantiate_from_default_config
+
+output_interface:
+  _target_: aiflows.interfaces.KeyInterface
+  keys_to_select: # Return only the "code"
+    - "code"
+
+model:
+  single_threaded: False
+  debug: False
+  n_independent_samples: 1
+
+prefix: "test_run--"
+run_name: ${prefix}${datamodule.name}--gpt-4--${flow_name}

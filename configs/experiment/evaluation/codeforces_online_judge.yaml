@@ -1,0 +1,12 @@
+# @package _global_
+
+defaults:
+  - /dataset@predictions_dataset: outputs_competitive_coding
+  - override /code_evaluator:
+      - codeforces_online_judge
+  - override /logger: wandb
+  - _self_
+
+verbose: True
+# The type of proxy we want to use: [username_pwd, ip_whitelist, all]
+proxy_type: all

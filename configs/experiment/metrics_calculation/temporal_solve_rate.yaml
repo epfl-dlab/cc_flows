@@ -1,0 +1,5 @@
+# @package _global_
+
+defaults:
+  - /metric@metrics.temporal_problem_solve_rate: temporal_metric
+  - /metric@metrics.temporal_problem_solve_rate.metric: problem_solve_rate

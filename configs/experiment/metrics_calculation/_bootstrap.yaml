@@ -1,0 +1,4 @@
+# @package _global_
+
+bootstrap_n: 1000
+num_workers: 10

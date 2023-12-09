@@ -1,0 +1,2 @@
+_target_: src.metrics.TemporalMetric
+metric: ??? # must be specified in the metrics_calculation config

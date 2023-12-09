@@ -1,0 +1,8 @@
+# @package _global_
+
+defaults:
+  - /dataset@predictions_dataset: outputs_competitive_coding
+  - override /code_evaluator:
+      - codeforces_local_evaluator
+  - override /logger: wandb
+  - _self_

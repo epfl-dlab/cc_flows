@@ -1,0 +1,39 @@
+# @package _global_
+
+defaults:
+  - _self_
+  - hydra: default
+  - logger: null
+  - predictions_dataset: null # must be overriden by the evaluation config
+  - code_evaluator: ???
+  - optional local: default.yaml
+  - optional private_fields: default.yaml
+
+wandb_run_path: ???
+split_to_evaluate: "test"
+override: False
+complete_override: False
+debug: False
+
+# path to work directory
+work_dir: ${hydra:runtime.cwd}
+
+# path to data directory
+data_dir: ${work_dir}/data
+
+# path to output directory, created dynamically by hydra
+output_dir: ${hydra:runtime.output_dir}
+
+local_results_cache_dir: null
+
+ignore_warnings: False
+print_config: True
+
+# Seed used to seed everything in the beginning of the run script and to fix randomness in dataset
+seed: 100
+
+# determines the log directory's parent folder
+logs_subfolder: evaluation
+
+# experiment name – determines the logging folder's path
+run_name: evaluation--${get_wandb_run_name:${wandb_run_path}, ${hydra:job.env_set.WANDB_API_KEY}}

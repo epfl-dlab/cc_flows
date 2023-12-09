@@ -1,0 +1,8 @@
+# EACH VARIABLE IN THE CONFIG WITH THIS NAME WILL BE HIDDEN (INDEPENDENTLY OF THEIR PATH)
+private_variable_names:
+  - api_infos
+  - api_information
+
+## EACH VARIABLE WITH THE GIVEN PATHS WILL BE HIDDEN
+# private_variable_paths:
+#   - model.debug

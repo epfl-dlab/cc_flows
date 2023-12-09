@@ -1,0 +1,22 @@
+data_dir: null
+
+debug: False
+debug_k: 12
+
+seed: ${seed}
+
+# batch_size needs to be specified
+batch_size: ???
+# num_workers needs to be specified
+num_workers: ???
+
+dataset_parameters:
+  test:
+    dataset:
+      seed: ${datamodule.seed}
+      debug: ${datamodule.debug}
+      debug_k: ${datamodule.debug_k}
+
+    dataloader:
+      batch_size: ${datamodule.batch_size}
+      num_workers: ${datamodule.num_workers}

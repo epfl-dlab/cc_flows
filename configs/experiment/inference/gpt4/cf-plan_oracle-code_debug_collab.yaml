@@ -1,0 +1,23 @@
+# @package _global_
+
+defaults:
+  - /experiment/inference/gpt4: _default
+  - override /datamodule:
+      [
+        codeforces_with_editorial_plans,
+        _bucketing_codeforces_before_and_after_cutoff_chatgpt,
+      ]
+
+flow:
+  _target_: aiflows.CCFlows.CF_CodeDebugCollabWithPlan.instantiate_from_default_config
+  subflows_config:
+    CodeGenerator:
+      backend:
+        api_infos: ${api_information}
+    CodeDebugCritic:
+      subflows_config:
+        CodeCriticWrongAttempt:
+          backend:
+            api_infos: ${api_information}
+
+flow_name: "plan_oracle-code_debug_collab"

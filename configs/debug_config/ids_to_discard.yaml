@@ -1,0 +1,11 @@
+# @package _global_
+
+# default debugging setup in which we exclude a set of datapoints from the inference
+
+ids_to_discard: ??? # list of ids to discard
+
+datamodule:
+  dataset_parameters:
+    test:
+      dataset:
+        ids_to_discard: ${ids_to_discard}

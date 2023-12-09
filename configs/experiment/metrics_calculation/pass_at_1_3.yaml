@@ -1,0 +1,5 @@
+# @package _global_
+
+defaults:
+  - /metric@metrics.pass_at_1: pass_at_1
+  - /metric@metrics.pass_at_3: pass_at_3

@@ -1,0 +1,4 @@
+# @package _global_
+
+defaults:
+  - /metric@metrics.problem_solve_rate: problem_solve_rate

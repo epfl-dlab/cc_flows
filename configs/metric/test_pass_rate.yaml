@@ -1,0 +1,4 @@
+defaults:
+  - problem_solve_rate
+
+test_level: True # Whether to compute the metric at the problem level or the test level

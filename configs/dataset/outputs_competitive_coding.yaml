@@ -1,0 +1,4 @@
+_target_: src.datasets.CompetitiveCodingOutputsDataset
+data_dir: null # Will be set at runtime
+
+seed: ${seed}

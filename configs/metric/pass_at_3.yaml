@@ -1,0 +1,4 @@
+defaults:
+  - pass_at_k
+
+k: 3

@@ -1,0 +1,9 @@
+# @package _global_
+
+defaults:
+  - /metric@metrics.temporal_pass_at_1: temporal_metric
+  - /metric@metrics.temporal_pass_at_1.metric: pass_at_1
+  - /metric@metrics.temporal_pass_at_3: temporal_metric
+  - /metric@metrics.temporal_pass_at_3.metric: pass_at_3
+  - /metric@metrics.temporal_pass_at_5: temporal_metric
+  - /metric@metrics.temporal_pass_at_5.metric: pass_at_5
