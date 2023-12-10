@@ -23,7 +23,7 @@ For details about the Codeforces dataset and how it was constructed, the experim
 
 ---
 ## 1. The Idea and the Repository in a Nutshell
-The paper proposes the abstraction of Flows that greatly simplifies the design and implementation of complex (work)Flows involving humans, AI systems, and tools. <b><a href="www.github.com/epfl-dlab/aiflows">aiFlows</a></b> is a Python library that implements the Flows abstraction and other infrastructure that aims to support researchers and developers in designing, implementing, evaluating, and sharing Flows of arbitrary complexity.
+The paper proposes the abstraction of Flows that greatly simplifies the design and implementation of complex (work)Flows involving humans, AI systems, and tools. <b><a href="https://github.com/epfl-dlab/aiflows">aiFlows</a></b> is a Python library that implements the Flows abstraction and other infrastructure that aims to support researchers and developers in designing, implementing, evaluating, and sharing Flows of arbitrary complexity.
 
 The paper demonstrates the potential of the Flows abstraction by conducting a detailed study of various Flows on the challenging task of competitive coding. The following figure illustrates the Flows used in the experiments (implemented <a href="https://huggingface.co/aiflows/CCFlows">here</a>):
 
