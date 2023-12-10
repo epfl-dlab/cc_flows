@@ -4,7 +4,7 @@
 
 # 🌊 Flows: Building Blocks of Reasoning and Collaborating AI
 
-This repository contains the data and the infrastructure for executing the experimental setup on competitive coding described in the paper <a href="docs/flows_paper.pdf">Flows: Building Blocks of Reasoning and Collaborating AI</a> (<a href="https://arxiv.org/abs/2308.01285">arXiv</a>). Additionally, the structure of the repository is general and aims to serve as a useful template for conducting reproducible studies on structured interactions involving humans, tools, and AI systems efficiently, using the [aiFlows](https://github.com/epfl-dlab/aiflows/) library. The Flows used in the experiments are available in the <a href="https://huggingface.co/aiflows/CCFlows">CCFlows</a> repository on the FlowVerse.
+This repository contains the data and the infrastructure for executing the experimental setup on competitive coding described in the paper <a href="assets/flows_paper.pdf">Flows: Building Blocks of Reasoning and Collaborating AI</a> (<a href="https://arxiv.org/abs/2308.01285">arXiv</a>). Additionally, the structure of the repository is general and aims to serve as a useful template for conducting reproducible studies on structured interactions involving humans, tools, and AI systems efficiently, using the [aiFlows](https://github.com/epfl-dlab/aiflows/) library. The Flows used in the experiments are available in the <a href="https://huggingface.co/aiflows/CCFlows">CCFlows</a> repository on the FlowVerse.
 
 For details about the Codeforces dataset and how it was constructed, the experimental setup, and the provided infrastructure, please refer to the paper.
 
